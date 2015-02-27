@@ -1,0 +1,15 @@
+{
+    "name": "matacms/matacms-post",
+    "description": "Post management for MATA CMS",
+    "keywords": ["yii2", "matacms-post", "post", "blog", "news", "RSS", "mata"],
+    "type": "yii2-extension",
+    "license": "MIT",
+    "support": {
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "matacms\\post\\": ""
+        }
+    }
+}
