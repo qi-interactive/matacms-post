@@ -1,0 +1,6 @@
+{
+    "name": "Post",
+    "description": "Post management for MATA CMS",
+    "icon" : "/images/module-icon.svg",
+    "version" : 1.0
+}
