@@ -30,7 +30,7 @@ class Post extends \matacms\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Title', 'Body', 'URI'], 'required'],
+            [['Title', 'Body', 'URI', 'PublicationDate'], 'required'],
             [['Title', 'Lead', 'Body'], 'string'],
             [['Author'], 'string', 'max' => 128],
             [['URI'], 'string', 'max' => 255]
