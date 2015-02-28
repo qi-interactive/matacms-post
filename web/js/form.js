@@ -5,16 +5,19 @@ matacms.post = matacms.post || {
 
 
 $(window).ready(function() {
-	$("#post-title").on("keyup", function() {
-		if (matacms.post.customSlugGenerated == false)
-			matacms.post.generateSlug()
-	});
 
-	$("#post-uri").on("keyup", function() {
-		if (matacms.post.customSlugGenerated == false && 
-			matacms.post.generatedSlug != $(this).val())
-			matacms.post.customSlugGenerated = true;
-	})
+	if (matacms.post.isNewModel()) {
+		$("#post-title").on("keyup", function() {
+			if (matacms.post.customSlugGenerated == false)
+				matacms.post.generateSlug()
+		});
+
+		$("#post-uri").on("keyup", function() {
+			if (matacms.post.customSlugGenerated == false && 
+				matacms.post.generatedSlug != $(this).val())
+				matacms.post.customSlugGenerated = true;
+		})
+	}
 })
 
 matacms.post.generateSlug = function() {
@@ -23,8 +26,13 @@ matacms.post.generateSlug = function() {
 }
 
 matacms.post.convertToSlug = function(text){
-    return text
-        .toLowerCase()
-        .replace(/ /g,'-')
-        .replace(/[^\w-]+/g,'');
+	return text
+	.toLowerCase()
+	.replace(/ /g,'-')
+	.replace(/[^\w-]+/g,'');
+}
+
+matacms.post.isNewModel = function() {
+	return window.location.href.indexOf("update") == -1 && 
+	window.location.href.indexOf("create") > -1;
 }

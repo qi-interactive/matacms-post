@@ -6,7 +6,7 @@ use matacms\post\assets\ModuleAsset;
 ModuleAsset::register($this);
 
 echo DynamicForm::widget([
-	'model' => new matacms\post\models\Post(),
+	'model' => $model,
 	'fieldAttributes' => [
 	'Title' => [
 	'fieldType' => "textInput"

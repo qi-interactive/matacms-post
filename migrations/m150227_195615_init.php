@@ -24,7 +24,8 @@ class m150227_195615_init extends Migration {
 			'Author'             => Schema::TYPE_STRING . '(128)',
 			'Lead'             => Schema::TYPE_TEXT . '(128)',
 			'Body'	=> Schema::TYPE_TEXT . ' NOT NULL',
-			'URI'	=> Schema::TYPE_STRING . '(255) NOT NULL'
+			'URI'	=> Schema::TYPE_STRING . '(255) NOT NULL',
+			'PublicationDate' => Schema::TYPE_DATETIME . ' NOT NULL'
 			]);
 	}
 
