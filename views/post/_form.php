@@ -10,23 +10,21 @@ $locator = new \yii\di\ServiceLocator();
 ?>
 <div class="post">
 
-    <?php $form = ActiveForm::begin(); 
+    <?php $form = ActiveForm::begin([
+        "id" => "form-post"
+        ]); 
     ?>
 
         <?= $form->field($model, 'Title') ?>
         <?= $form->field($model, 'Body')->wysiwyg() ?>
         
-        <?= $form->field($model, 'Lead')->wysiwyg() ?>
         <?= $form->field($model, 'Author') ?>
+        <?php  // $form->field($model, 'Lead') ?>
 
 
-        <?php if (Yii::$app->getModule("category") != null): ?>
+        <?= $form->field($model, 'Lead') ?>
 
-        	<?= $form->field($model, 'Lead')->category() ?>
-
-        <?php endif; ?>
-
-
+        <?= $form->field($model, 'PublicationDate') ?>
 
     	<?= $form->field($model, 'URI') ?>
         <div class="form-group">
