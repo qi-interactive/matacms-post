@@ -19,12 +19,14 @@ $locator = new \yii\di\ServiceLocator();
         <?= $form->field($model, 'Body')->wysiwyg() ?>
         
         <?= $form->field($model, 'Author') ?>
+        <?= $form->field($model, 'Author') ?>
         <?php  // $form->field($model, 'Lead') ?>
 
 
-        <?= $form->field($model, 'Lead') ?>
+        <?= $form->field($model, 'Lead')->media() ?>
 
-        <?= $form->field($model, 'PublicationDate') ?>
+
+        <?= $form->field($model, 'PublicationDate')->dateTime() ?>
 
     	<?= $form->field($model, 'URI') ?>
         <div class="form-group">
