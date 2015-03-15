@@ -22,6 +22,20 @@ use mata\base\Module as BaseModule;
  */
 class Module extends BaseModule {
 
+
+	public function init() {
+
+		parent::init();
+
+		$this->setAliases([
+			"@matacms/post/models" => 'frontend/models'
+			]);
+
+		
+		
+
+	}
+
 	public function getNavigation() {
 		return "/mata-cms/post/post";
 	}

@@ -11,6 +11,14 @@ ClipsImperaviRedactorPluginAsset::register($this);
     <?php $form = ActiveForm::begin([
         "id" => "form-post"
         ]); 
+
+
+
+    echo "<pre>";
+    print_r(\Yii::$aliases);
+
+    exit;
+    
     ?>
 
         <?= $form->field($model, 'Title') ?>
@@ -19,14 +27,12 @@ ClipsImperaviRedactorPluginAsset::register($this);
         ]) ?>
         
         <?= $form->field($model, 'Author') ?>
-        <?= $form->field($model, 'Author') ?>
         <?php  // $form->field($model, 'Lead') ?>
 
-
         <?= $form->field($model, 'Lead') ?>
+        <?= $form->field($model, 'LeadMedia') ?>
 
-
-        <?= $form->field($model, 'PublicationDate')->dateTime() ?>
+        <?= $form->field($model, 'PublicationDate') ?>
 
     	<?= $form->field($model, 'URI') ?>
 
