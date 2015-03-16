@@ -9,7 +9,7 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "matacms\\post\\": ["frontend/modules/mastacms/post", "frontend/modules/matacms/post"]
+            "matacms\\post\\": ["../../../frontend/modules/matacms/post", ""]
         }
     }
 }
