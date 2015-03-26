@@ -22,7 +22,7 @@ ClipsImperaviRedactorPluginAsset::register($this);
         <?php  // $form->field($model, 'Lead') ?>
 
         <?= $form->field($model, 'Lead') ?>
-        <?= $form->field($model, 'LeadMedia') ?>
+        <?= $form->field($model, 'LeadMedia')->media() ?>
 
         <?= $form->field($model, 'PublicationDate') ?>
 
