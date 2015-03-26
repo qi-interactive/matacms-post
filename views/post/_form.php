@@ -10,15 +10,7 @@ ClipsImperaviRedactorPluginAsset::register($this);
 
     <?php $form = ActiveForm::begin([
         "id" => "form-post"
-        ]); 
-
-
-
-    echo "<pre>";
-    print_r(\Yii::$aliases);
-
-    exit;
-    
+        ]);    
     ?>
 
         <?= $form->field($model, 'Title') ?>
