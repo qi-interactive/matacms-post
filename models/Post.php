@@ -3,6 +3,7 @@
 namespace matacms\post\models;
 
 use Yii;
+use matacms\base\CalendarInterface;
 
 /**
  * This is the model class for table "mata_post".
@@ -14,7 +15,7 @@ use Yii;
  * @property string $Body
  * @property string $URI
  */
-class Post extends \matacms\db\ActiveRecord
+class Post extends \matacms\db\ActiveRecord implements CalendarInterface
 {
     /**
      * @inheritdoc
@@ -50,5 +51,10 @@ class Post extends \matacms\db\ActiveRecord
             'Body' => 'Body',
             'URI' => 'Uri',
         ];
+    }
+
+    public function getCalendarDate()
+    {
+        return $this->PublicationDate;
     }
 }
