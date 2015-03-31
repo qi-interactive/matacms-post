@@ -30,7 +30,7 @@ use matacms\widgets\ActiveForm;
 
     <?php ActiveForm::end(); ?>
 
-</div><!-- qwdqwd -->
+</div>
 
 
 
