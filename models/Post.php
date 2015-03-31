@@ -53,8 +53,14 @@ class Post extends \matacms\db\ActiveRecord implements CalendarInterface
         ];
     }
 
-    public function getCalendarDate()
+    public static function getEventDateAttribute()
+    {
+        return 'PublicationDate';
+    }
+
+    public function getEventDate()
     {
         return $this->PublicationDate;
     }
+
 }
