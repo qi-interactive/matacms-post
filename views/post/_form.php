@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use matacms\widgets\ActiveForm;
-use yii\imperavi\ClipsImperaviRedactorPluginAsset;
+use mata\imperavi\ClipsImperaviRedactorPluginAsset;
 ClipsImperaviRedactorPluginAsset::register($this);
 
 ?>
