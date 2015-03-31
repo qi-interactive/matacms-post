@@ -2,8 +2,6 @@
 
 use yii\helpers\Html;
 use matacms\widgets\ActiveForm;
-use yii\imperavi\ClipsImperaviRedactorPluginAsset;
-ClipsImperaviRedactorPluginAsset::register($this);
 
 ?>
 <div class="post">
