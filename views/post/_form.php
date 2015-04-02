@@ -12,9 +12,8 @@ use matacms\widgets\ActiveForm;
     ?>
 
         <?= $form->field($model, 'Title') ?>
-        <?= $form->field($model, 'Body')->wysiwyg([
-            "plugins" => ['clips']
-        ]) ?>
+
+        <?= $form->field($model, 'Body')->wysiwyg() ?>
         
         <?= $form->field($model, 'Author') ?>
         <?php  // $form->field($model, 'Lead') ?>
@@ -24,7 +23,7 @@ use matacms\widgets\ActiveForm;
 
         <?= $form->field($model, 'PublicationDate') ?>
 
-    	<?= $form->field($model, 'URI') ?>
+    	<?= $form->field($model, 'URI')->slug('Title') ?>
 
         <?= $form->submitButton() ?>
 
