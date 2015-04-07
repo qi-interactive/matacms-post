@@ -63,4 +63,8 @@ class Post extends \matacms\db\ActiveRecord implements CalendarInterface
         return $this->PublicationDate;
     }
 
+    public function filterableAttributes() {
+        return ["Title", "PublicationDate"];
+    }
+
 }

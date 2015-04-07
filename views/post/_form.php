@@ -12,8 +12,8 @@ use matacms\widgets\ActiveForm;
     ?>
 
         <?= $form->field($model, 'Title') ?>
-
-        <?= $form->field($model, 'Body')->wysiwyg() ?>
+        <?= $form->field($model, 'Body')->wysiwyg([
+        ]) ?>
         
         <?= $form->field($model, 'Author') ?>
         <?php  // $form->field($model, 'Lead') ?>
