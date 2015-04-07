@@ -13,7 +13,6 @@ use matacms\widgets\ActiveForm;
 
         <?= $form->field($model, 'Title') ?>
         <?= $form->field($model, 'Body')->wysiwyg([
-            "plugins" => ['clips']
         ]) ?>
         
         <?= $form->field($model, 'Author') ?>
