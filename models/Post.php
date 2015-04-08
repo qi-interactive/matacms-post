@@ -31,10 +31,10 @@ class Post extends \matacms\db\ActiveRecord implements CalendarInterface
     public function rules()
     {
         return [
-            [['Title', 'Body', 'URI', 'PublicationDate'], 'required'],
-            [['Title', 'Lead', 'Body'], 'string'],
-            [['Author'], 'string', 'max' => 128],
-            [['URI'], 'string', 'max' => 255]
+        [['Title', 'Body', 'URI', 'PublicationDate'], 'required'],
+        [['Title', 'Lead', 'Body'], 'string'],
+        [['Author'], 'string', 'max' => 128],
+        [['URI'], 'string', 'max' => 255]
         ];
     }
 
@@ -44,12 +44,12 @@ class Post extends \matacms\db\ActiveRecord implements CalendarInterface
     public function attributeLabels()
     {
         return [
-            'Id' => 'ID',
-            'Title' => 'Title',
-            'Author' => 'Author',
-            'Lead' => 'Lead',
-            'Body' => 'Body',
-            'URI' => 'Uri',
+        'Id' => 'ID',
+        'Title' => 'Title',
+        'Author' => 'Author',
+        'Lead' => 'Lead',
+        'Body' => 'Body',
+        'URI' => 'Uri',
         ];
     }
 
