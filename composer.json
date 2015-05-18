@@ -7,6 +7,9 @@
     "support": {
     },
     "minimum-stability": "dev",
+    "require": {
+        "zelenin/yii2-rss": "dev-master"
+    },
     "autoload": {
         "psr-4": {
             "matacms\\post\\": ["../../../frontend/modules/matacms/post", ""]
