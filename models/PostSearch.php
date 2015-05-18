@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * @link http://www.matacms.com/
+ * @copyright Copyright (c) 2015 Qi Interactive Limited
+ * @license http://www.matacms.com/license/
+ */
+
 namespace matacms\post\models;
 
 use Yii;
@@ -11,9 +17,7 @@ use matacms\post\models\Post;
  * PostSearch represents the model behind the search form about `matacms\post\models\Post`.
  */
 class PostSearch extends Post {
-    /**
-     * @inheritdoc
-     */
+    
     public function rules()
     {
         return [
@@ -22,9 +26,6 @@ class PostSearch extends Post {
         ];
     }
 
-    /**
-     * @inheritdoc
-     */
     public function scenarios()
     {
         // bypass scenarios() implementation in the parent class
@@ -66,4 +67,5 @@ class PostSearch extends Post {
 
         return $dataProvider;
     }
+
 }

@@ -6,9 +6,9 @@
     "license": "MIT",
     "support": {
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {
-        "zelenin/yii2-rss": "dev-master"
+        "zelenin/yii2-rss": "0.0.4"
     },
     "autoload": {
         "psr-4": {

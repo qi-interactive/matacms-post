@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * @link http://www.matacms.com/
+ * @copyright Copyright (c) 2015 Qi Interactive Limited
+ * @license http://www.matacms.com/license/
+ */
+
 namespace matacms\post\models;
 
 use Yii;
@@ -17,17 +23,12 @@ use matacms\interfaces\CalendarInterface;
  */
 class Post extends \matacms\db\ActiveRecord implements CalendarInterface
 {
-    /**
-     * @inheritdoc
-     */
+    
     public static function tableName()
     {
         return 'mata_post';
     }
 
-    /**
-     * @inheritdoc
-     */
     public function rules()
     {
         return [
@@ -37,10 +38,7 @@ class Post extends \matacms\db\ActiveRecord implements CalendarInterface
         [['URI'], 'string', 'max' => 255]
         ];
     }
-
-    /**
-     * @inheritdoc
-     */
+    
     public function attributeLabels()
     {
         return [

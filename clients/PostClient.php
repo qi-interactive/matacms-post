@@ -1,4 +1,10 @@
-<?php 
+<?php
+
+/**
+ * @link http://www.matacms.com/
+ * @copyright Copyright (c) 2015 Qi Interactive Limited
+ * @license http://www.matacms.com/license/
+ */
 
 namespace matacms\post\clients;
 
@@ -12,7 +18,6 @@ class PostClient extends \matacms\clients\SimpleClient {
 	}
 
 	public function findAll() {
-
 		$model = $this->getModel();
 		$this->closureParams = [$model];
 
@@ -39,4 +44,5 @@ class PostClient extends \matacms\clients\SimpleClient {
 	public function getModel() {
 		return new Post();
 	}
+
 }
