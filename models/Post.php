@@ -3,7 +3,7 @@
 namespace matacms\post\models;
 
 use Yii;
-use matacms\base\CalendarInterface;
+use matacms\interfaces\CalendarInterface;
 
 /**
  * This is the model class for table "mata_post".
