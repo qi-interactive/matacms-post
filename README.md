@@ -42,6 +42,10 @@ Returns all published Post entities without caching.
 Changelog
 ---------
 
+## 1.0.2-alpha, May 21, 2015
+
+- composer.json update.
+
 ## 1.0.1-alpha, May 18, 2015
 
 - README.md updated with PostClient usage.
