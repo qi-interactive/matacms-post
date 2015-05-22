@@ -14,7 +14,11 @@ class PostClient extends \matacms\clients\SimpleClient {
 
 	public function findByURI($uri) {
 		$model = $this->getModel();
-		return $model::find()->where(['and', "PublicationDate <= NOW()", "URI = '$uri'"])->one();
+		$attributes = ['and', "URI = '$uri'"];
+		if(\Yii::$app->user->isGuest) {
+			$attributes = array_merge($attributes, ['PublicationDate <= NOW()']);
+		}
+		return $model::find()->where($attributes)->one();
 	}
 
 	public function findAll() {
@@ -23,9 +27,14 @@ class PostClient extends \matacms\clients\SimpleClient {
 
 		$model = $model::getDb()->cache(function ($db) {
 			$closureParams = $this->getClosureParams();
-			return $closureParams[0]->find()->where([
-				'and', "PublicationDate <= NOW()"
-				])->all();
+
+			$query = $closureParams[0]->find();
+
+			if(\Yii::$app->user->isGuest) {
+				$query->andWhere('PublicationDate <= NOW()');
+			}
+
+			return $query->all();
 		}, null, new \matacms\cache\caching\MataLastUpdatedTimestampDependency());
 
 		return $model;
@@ -36,9 +45,13 @@ class PostClient extends \matacms\clients\SimpleClient {
 	 * Useful for passing to ActiveDataProvider
 	 */
 	public function getFindAllQuery() {
-		return $this->getModel()->find()->where([
-			'and', "PublicationDate <= NOW()"
-			]);
+		$query = $this->getModel()->find();
+
+		if(\Yii::$app->user->isGuest) {
+			$query->andWhere('PublicationDate <= NOW()');
+		}
+		
+		return $query;
 	}
 
 	public function getModel() {
