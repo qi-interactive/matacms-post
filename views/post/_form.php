@@ -8,20 +8,20 @@ use matacms\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin([
         "id" => "form-post"
-        ]);    
+        ]);
     ?>
 
         <?= $form->field($model, 'Title') ?>
         <?= $form->field($model, 'Body')->wysiwyg([
         ]) ?>
-        
+
         <?= $form->field($model, 'Author') ?>
         <?php  // $form->field($model, 'Lead') ?>
 
         <?= $form->field($model, 'Lead') ?>
         <?= $form->field($model, 'LeadMedia')->media() ?>
 
-        <?= $form->field($model, 'PublicationDate') ?>
+        <?= $form->field($model, 'PublicationDate')->datetime() ?>
 
     	<?= $form->field($model, 'URI')->slug('Title') ?>
 
@@ -30,7 +30,3 @@ use matacms\widgets\ActiveForm;
     <?php ActiveForm::end(); ?>
 
 </div>
-
-
-
-
