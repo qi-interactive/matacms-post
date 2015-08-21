@@ -10,7 +10,7 @@ Post module allows to manage posts in MATA CMS.
 Installation
 ------------
 
-- Add the application using composer: 
+- Add the application using composer:
 
 ```json
 "matacms/matacms-post": "~1.0.0"
@@ -19,9 +19,9 @@ Installation
 Client
 ------
 
-Post Client extends [`matacms\clients`](https://github.com/qi-interactive/matacms-base/blob/master/clients/SimpleClient.php). 
+Post Client extends [`matacms\clients`](https://github.com/qi-interactive/matacms-base/blob/master/clients/SimpleClient.php).
 
-In addition, it exposes the following methods: 
+In addition, it exposes the following methods:
 
 ```php
 public function findByURI($uri) {}
@@ -41,6 +41,10 @@ Returns all published Post entities without caching.
 
 Changelog
 ---------
+
+## 1.0.3-alpha, August 21, 2015
+
+- Added datetime field for PublicationDate
 
 ## 1.0.2-alpha, May 22, 2015
 
