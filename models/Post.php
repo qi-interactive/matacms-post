@@ -23,10 +23,21 @@ use matacms\interfaces\CalendarInterface;
  */
 class Post extends \matacms\db\ActiveRecord implements CalendarInterface
 {
-    
+
     public static function tableName()
     {
         return 'mata_post';
+    }
+
+    public function behaviors() {
+        return [
+            [
+                'class' => \mata\arhistory\behaviors\HistoryBehavior::className()
+            ],
+            [
+                'class' => \matacms\environment\behaviors\EnvironmentBehavior::className()
+            ],
+        ];
     }
 
     public function rules()
@@ -38,7 +49,7 @@ class Post extends \matacms\db\ActiveRecord implements CalendarInterface
         [['URI'], 'string', 'max' => 255]
         ];
     }
-    
+
     public function attributeLabels()
     {
         return [

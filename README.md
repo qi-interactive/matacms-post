@@ -42,6 +42,9 @@ Returns all published Post entities without caching.
 Changelog
 ---------
 
+## 1.0.3.2-alpha, September 2, 2016
+- Updated behaviors for Post model
+
 ## 1.0.3.1-alpha, September 18, 2015
 - Added migration for matacms-language support
 
